@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -12,11 +11,14 @@
         android:id="@+id/edtText"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:textColor="#FFFF"
-        android:textColorHint="#FFFF"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
         android:textAlignment="center"
+        android:text="@string/edit_text_hint"
         android:paddingLeft="10dp"
+        android:maxLength="240"
         android:paddingRight="10dp"
         android:inputType="textMultiLine|textNoSuggestions"
         android:background="@null"/>
+
 </RelativeLayout>
