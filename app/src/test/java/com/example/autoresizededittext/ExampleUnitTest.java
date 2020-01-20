@@ -1,4 +1,4 @@
-package com.example.resizableedittext;
+package com.example.autoresizededittext;
 
 import org.junit.Test;
 

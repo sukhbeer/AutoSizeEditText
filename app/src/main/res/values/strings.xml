@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">Resizable EditText</string>
-    <string name="edit_text_hint"><font size="15">Type SomeThing</font></string>
+    <string name="app_name">AutosizeEdittext</string>
+    <string name="edit_text_hint">Type Something</string>
 </resources>
