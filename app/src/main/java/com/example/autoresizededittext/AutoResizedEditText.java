@@ -48,8 +48,6 @@ public class AutoResizedEditText extends EditText {
 
     private RectF mAvailableSpaceRect;
 
-    EditText editText = findViewById(R.id.edtText);
-
     private SparseIntArray mTextCachedSizes;
 
     private TextPaint paint;
@@ -57,10 +55,6 @@ public class AutoResizedEditText extends EditText {
     private float maxTextSize;
 
     private float mSpacingMult = 1.0f;
-
-    private float mSpacingAdd = 0.0f;
-
-    private float minTextSize = 16;
 
     private static final int NO_LINE_LIMIT = -1;
     private int mMaxLines;
@@ -141,7 +135,6 @@ public class AutoResizedEditText extends EditText {
     public void setLineSpacing(float add, float mult) {
         super.setLineSpacing(add, mult);
         mSpacingMult = mult;
-        mSpacingAdd = add;
     }
 
 
@@ -155,6 +148,8 @@ public class AutoResizedEditText extends EditText {
         if (!mInitializedDimens) {
             return;
         }
+        //Minimum TextSize
+        float minTextSize = 16;
         int startSize = (int) minTextSize;
         int heightLimit = getMeasuredHeight() - getCompoundPaddingBottom()
                 - getCompoundPaddingTop();
@@ -220,6 +215,7 @@ public class AutoResizedEditText extends EditText {
         mTextCachedSizes.put(key, size);
         return size;
     }
+
 
     private static int binarySearch(int start, int end, SizeTester sizeTester,
                                     RectF availableSpace) {

@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         final EditText editText = findViewById(R.id.edtText);
+        //Max TextSize
         editText.setTextSize(80);
     }
 }
